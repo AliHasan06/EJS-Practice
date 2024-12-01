@@ -1,0 +1,1 @@
+Develop a program that appends user input to a log file every time the user runs the script.

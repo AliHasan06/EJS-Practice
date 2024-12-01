@@ -1,0 +1,1 @@
+Write a Node.js application that deletes a specified file from the file system after confirming with the user.

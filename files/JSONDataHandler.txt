@@ -1,0 +1,1 @@
+Build a script that reads a JSON file, modifies its contents, and writes the updated data back to the same file.

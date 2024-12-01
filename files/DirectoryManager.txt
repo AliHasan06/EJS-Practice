@@ -1,0 +1,1 @@
+Implement a script that creates a new directory and a specified number of text files within it.
