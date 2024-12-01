@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 app.set("view", "ejs");
 app.use(express.json());
