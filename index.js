@@ -13,6 +13,11 @@ app.get("/", (req, res) => {
     res.render("index", { files: files });
   });
 });
+
+app.get("/file/:filename", (req, res) => {
+ fs.readFile(`./f`)
+});
+
 app.post("/create", (req, res) => {
  fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`, req.body.details,(err)=>{
 res.redirect('/')
