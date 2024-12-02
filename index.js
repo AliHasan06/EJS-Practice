@@ -15,13 +15,19 @@ app.get("/", (req, res) => {
 });
 
 app.get("/file/:filename", (req, res) => {
- fs.readFile(`./f`)
+  fs.readFile(`./files/${req.params.filename}`, "utf8", (err, filedata) => {
+    res.render("show",{filename: req.params.filename,filedata: filedata});
+  });
 });
 
 app.post("/create", (req, res) => {
- fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`, req.body.details,(err)=>{
-res.redirect('/')
- })
+  fs.writeFile(
+    `./files/${req.body.title.split(" ").join("")}.txt`,
+    req.body.details,
+    (err) => {
+      res.redirect("/");
+    }
+  );
 });
 
 app.listen(3000);
